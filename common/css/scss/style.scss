@@ -1,0 +1,327 @@
+/*----------------------------------------
+リセット
+----------------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p{
+	font-size: 16px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: opacity 0.3s;
+
+	&:hover{
+		opacity: 0.7;
+	}
+}
+
+li{
+	list-style: none;
+}
+
+/*----------------------------------------
+共通
+----------------------------------------*/
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	color: #5e605d;
+	font-family: serif;
+}
+
+/*----------------------------------------
+ヘッダー
+----------------------------------------*/
+header {
+	padding: 20px;
+	background-color: #ddffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	h1 {
+		width: 180px;
+		line-height: 1;
+		
+		img {
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 599px) {
+		h1{
+			width: 100px;
+		}
+	}
+
+	nav {
+
+		ul {
+			display: flex;
+
+			li {
+				margin-right: 20px;
+
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+			
+			@media screen and (max-width: 599px) {
+				li{
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
+
+/*----------------------------------------
+メイン
+----------------------------------------*/
+main {
+	text-align: center;
+
+	section {
+		padding: 60px 0;
+
+		h2{
+			font-size: 28px;
+			margin-bottom: 60px;
+		}
+	}
+
+	@media screen and (max-width: 599px) {
+		section{
+			padding: 60px 20px;
+		}
+	}
+
+
+	/*---------- movie ----------*/
+	#movie {
+		padding: 60px 0;
+
+		.vidBox {
+			width: 100%;
+			max-width: 900px;
+			margin: 0 auto;
+
+			video {
+				width: 100%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 599px) {
+		#movie {
+			padding: 20px;
+		}
+	}
+
+	/*---------- about ----------*/
+	#about {
+		background-color: #eeffff;
+
+		.vertical {
+			writing-mode: vertical-rl;
+			text-align: left;
+			margin: auto;
+			line-height: 5;
+			letter-spacing: 0.1em;
+		}
+
+		@media screen and (max-width: 750px) {
+			.vertical {
+				line-height: 4;
+			}	
+		}
+		@media screen and (max-width: 650px) {
+			.vertical {
+				line-height: 3.5;
+			}	
+		}
+		@media screen and (max-width: 550px) {
+			.vertical {
+				line-height: 3;
+			}	
+		}
+		@media screen and (max-width: 450px) {
+			.vertical {
+				line-height: 2.5;
+			}	
+		}
+		@media screen and (max-width: 400px) {
+			.vertical {
+				line-height: 2.3;
+			}	
+		}
+
+	}
+	
+	/*---------- recipe ----------*/
+	#recipe {
+		background-color: #cfffed;
+
+		.recipeBox {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			max-width: 900px;
+			margin: auto;
+			justify-content: center;
+
+			a {
+				display: block;
+				width: calc((100% - 40px) / 2);
+				margin-right: 40px;
+				margin-bottom: 40px;
+
+				&:nth-child(2n){
+					margin-right: 0;
+				}
+				&:nth-child(n+3){
+					margin-bottom: 0;
+				}
+
+				img {
+					width: 100%;
+					vertical-align: bottom;
+					margin-bottom: 10px;
+				}				
+			}
+
+			@media screen and (max-width: 599px) {
+				a{
+					width: calc((100% - 20px) / 2);
+					margin-right: 20px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	/*---------- shop ----------*/
+	#shop {
+
+		.shopItems {
+			padding: 0;
+			margin: auto;
+			margin-bottom: 40px;
+			width: 100%;
+			max-width: 900px;
+		
+			a{
+				display: flex;
+				justify-content: flex-start;
+	
+				&:last-child{
+					margin-bottom: 0;
+				}
+	
+				.leftBox {
+					width: 30%;
+					margin-right: 20px;
+	
+					img {
+						width: 100%;
+					}
+				}
+
+				@media screen and (max-width: 599px) {
+					.leftBox {
+						width: 100%;
+					}
+				}
+	
+				.rightBox {
+					text-align: left;
+					line-height: 2;
+	
+					h3{
+						font-size: 20px;
+					}
+				}
+			}
+		}
+
+		/*----- map -----*/
+		iframe {
+			margin: auto;
+			width: 100%;
+			max-width: 900px;
+			height: 400px;
+		}
+
+		@media screen and (max-width: 599px) {
+			.shopItems {
+				a{
+					flex-direction: column;
+				}
+			}
+		}
+	}
+}
+
+
+/*----------------------------------------
+フッター
+----------------------------------------*/
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 60px 0;
+	text-align: center;
+	background-color: #ddffff;
+
+	/*---------- sns ----------*/
+	.sns {
+		display: flex;
+		justify-content: center;
+		
+		&Icon {
+			display: block;
+			width: 40px;
+			height: 40px;
+			border: solid 2px;
+			border-radius: 100%;
+			padding: 10px;
+			font-size: 30px;
+			position: relative;
+			margin-right: 20px;
+
+			&:last-child{
+				margin-right: 0;
+			}
+
+			i {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		.insta {
+			border-color: #c6529a;
+			color: #c6529a;
+		}
+		.email {
+			border-color: #f3981d;
+			color: #f3981d;
+		}
+	}
+
+	/*---------- copyright ----------*/
+	small{
+		margin-top: 40px;
+	}
+}

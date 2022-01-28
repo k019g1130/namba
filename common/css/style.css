@@ -1,0 +1,362 @@
+@charset "UTF-8";
+/*----------------------------------------
+リセット
+----------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+li {
+  list-style: none;
+}
+
+/*----------------------------------------
+共通
+----------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #5e605d;
+  font-family: serif;
+}
+
+/*----------------------------------------
+ヘッダー
+----------------------------------------*/
+header {
+  padding: 20px;
+  background-color: #ddffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  width: 180px;
+  line-height: 1;
+}
+
+header h1 img {
+  width: 100%;
+}
+
+@media screen and (max-width: 599px) {
+  header h1 {
+    width: 100px;
+  }
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 599px) {
+  header nav ul li {
+    margin-right: 10px;
+  }
+}
+
+/*----------------------------------------
+メイン
+----------------------------------------*/
+main {
+  text-align: center;
+  /*---------- movie ----------*/
+  /*---------- about ----------*/
+  /*---------- recipe ----------*/
+  /*---------- shop ----------*/
+}
+
+main section {
+  padding: 60px 0;
+}
+
+main section h2 {
+  font-size: 28px;
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 599px) {
+  main section {
+    padding: 60px 20px;
+  }
+}
+
+main #movie {
+  padding: 60px 0;
+}
+
+main #movie .vidBox {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+main #movie .vidBox video {
+  width: 100%;
+}
+
+@media screen and (max-width: 599px) {
+  main #movie {
+    padding: 20px;
+  }
+}
+
+main #about {
+  background-color: #eeffff;
+}
+
+main #about .vertical {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-align: left;
+  margin: auto;
+  line-height: 5;
+  letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 750px) {
+  main #about .vertical {
+    line-height: 4;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  main #about .vertical {
+    line-height: 3.5;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  main #about .vertical {
+    line-height: 3;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  main #about .vertical {
+    line-height: 2.5;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main #about .vertical {
+    line-height: 2.3;
+  }
+}
+
+main #recipe {
+  background-color: #cfffed;
+}
+
+main #recipe .recipeBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #recipe .recipeBox a {
+  display: block;
+  width: calc((100% - 40px) / 2);
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+main #recipe .recipeBox a:nth-child(2n) {
+  margin-right: 0;
+}
+
+main #recipe .recipeBox a:nth-child(n+3) {
+  margin-bottom: 0;
+}
+
+main #recipe .recipeBox a img {
+  width: 100%;
+  vertical-align: bottom;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 599px) {
+  main #recipe .recipeBox a {
+    width: calc((100% - 20px) / 2);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+main #shop {
+  /*----- map -----*/
+}
+
+main #shop .shopItems {
+  padding: 0;
+  margin: auto;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 900px;
+}
+
+main #shop .shopItems a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main #shop .shopItems a:last-child {
+  margin-bottom: 0;
+}
+
+main #shop .shopItems a .leftBox {
+  width: 30%;
+  margin-right: 20px;
+}
+
+main #shop .shopItems a .leftBox img {
+  width: 100%;
+}
+
+@media screen and (max-width: 599px) {
+  main #shop .shopItems a .leftBox {
+    width: 100%;
+  }
+}
+
+main #shop .shopItems a .rightBox {
+  text-align: left;
+  line-height: 2;
+}
+
+main #shop .shopItems a .rightBox h3 {
+  font-size: 20px;
+}
+
+main #shop iframe {
+  margin: auto;
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+}
+
+@media screen and (max-width: 599px) {
+  main #shop .shopItems a {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/*----------------------------------------
+フッター
+----------------------------------------*/
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 60px 0;
+  text-align: center;
+  background-color: #ddffff;
+  /*---------- sns ----------*/
+  /*---------- copyright ----------*/
+}
+
+footer .sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .snsIcon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: solid 2px;
+  border-radius: 100%;
+  padding: 10px;
+  font-size: 30px;
+  position: relative;
+  margin-right: 20px;
+}
+
+footer .snsIcon:last-child {
+  margin-right: 0;
+}
+
+footer .snsIcon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+footer .sns .insta {
+  border-color: #c6529a;
+  color: #c6529a;
+}
+
+footer .sns .email {
+  border-color: #f3981d;
+  color: #f3981d;
+}
+
+footer small {
+  margin-top: 40px;
+}
+/*# sourceMappingURL=style.css.map */
